@@ -1,0 +1,13 @@
+2026-10-05 12:37:56.283 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Escribe la ruta: 
+2026-10-05 12:37:56.285 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - La ruta del fichero: C:\Users\usuario1234\Documents\Prueba\fichero.txt
+2026-10-05 12:37:56.285 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Nombre del fichero: fichero.txt
+2026-10-05 12:37:56.285 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Entro en siguiente directorio...
+2026-10-05 12:37:56.286 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - La ruta del fichero: C:\Users\usuario1234\Documents\Prueba\Prueba2\hola.txt
+2026-10-05 12:37:56.286 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Nombre del fichero: hola.txt
+2026-10-05 12:37:56.286 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Entro en siguiente directorio...
+2026-10-05 12:37:56.286 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - La ruta del fichero: C:\Users\usuario1234\Documents\Prueba\Prueba2\Prueba3\adios.txt
+2026-10-05 12:37:56.286 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Nombre del fichero: adios.txt
+2026-10-05 12:37:56.286 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - La ruta del fichero: C:\Users\usuario1234\Documents\Prueba\Prueba2\Prueba3\prueba3_2.txt
+2026-10-05 12:37:56.286 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Nombre del fichero: prueba3_2.txt
+2026-10-05 12:37:56.287 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - La ruta del fichero: C:\Users\usuario1234\Documents\Prueba\Prueba2\Prueba3\prueba3_3.txt
+2026-10-05 12:37:56.287 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Nombre del fichero: prueba3_3.txt

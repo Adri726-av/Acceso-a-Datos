@@ -1,0 +1,12 @@
+2026-10-08 08:13:15.906 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Directorio creado: C:\Users\usuario1234\miDirectorio
+2026-10-08 08:13:15.907 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Fichero creado: lectura.txt
+2026-10-08 08:13:15.908 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Fichero creado: normal.txt
+2026-10-08 08:13:15.908 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - lectura.txt modificado a solo lectura
+2026-10-08 08:13:15.908 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - lectura.txt -> lectura: true | escritura: false | ejecución: true
+2026-10-08 08:13:15.908 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - normal.txt -> lectura: true | escritura: true | ejecución: true
+2026-10-08 08:13:15.909 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - normal.txt renombrado a renombrado.txt
+2026-10-08 08:13:15.909 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - No se ha podido borrar el archivo lectura.txt
+2026-10-08 08:13:15.909 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Permiso de escritura restaurado en lectura.txt
+2026-10-08 08:13:15.909 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - El fichero lectura.txt se ha podido borrar correctamente
+2026-10-08 08:13:15.910 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - Contenido final de mi directorio
+2026-10-08 08:13:15.910 [main] DEBUG UNIDAD_1.Boletin_1.Ej3.Gestiona - renombrado.txt
