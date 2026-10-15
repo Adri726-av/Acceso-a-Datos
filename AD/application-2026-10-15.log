@@ -1,0 +1,28 @@
+2026-10-15 08:11:36.541 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Nombre del fichero: fichero.txt
+2026-10-15 08:11:36.543 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Nombre del fichero: Hola.txt
+2026-10-15 08:11:36.543 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Entro en siguiente directorio...
+2026-10-15 08:11:36.544 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Nombre del fichero: hola.txt
+2026-10-15 08:11:36.544 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Entro en siguiente directorio...
+2026-10-15 08:11:36.544 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Nombre del fichero: adios.txt
+2026-10-15 08:11:36.545 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Nombre del fichero: prueba3_2.txt
+2026-10-15 08:11:36.545 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Nombre del fichero: prueba3_3.txt
+2026-10-15 08:11:36.545 [main] INFO  UNIDAD_1.Boletin_1.Ej5.Gestiona - Tamaño total de los archivos: 0.0MB
+2026-10-15 08:11:36.545 [main] INFO  UNIDAD_1.Boletin_1.Ej5.Gestiona - Tamaño total de los archivos: 0.0MB
+2026-10-15 08:11:36.546 [main] DEBUG UNIDAD_1.Boletin_1.Ej5.Gestiona - Nombre del fichero: tuputamadre.txt
+2026-10-15 08:11:36.546 [main] INFO  UNIDAD_1.Boletin_1.Ej5.Gestiona - Tamaño total de los archivos: 0.0MB
+2026-10-15 08:19:36.884 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\fichero.txt
+2026-10-15 08:19:36.886 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\Prueba2
+2026-10-15 08:19:36.886 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\Hola.txt
+2026-10-15 08:19:36.886 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\tuputamadre.txt
+2026-10-15 08:24:15.496 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\fichero.txt
+2026-10-15 08:24:15.500 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - 0
+2026-10-15 08:24:15.500 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\Prueba2
+2026-10-15 08:24:15.500 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - 0
+2026-10-15 08:24:15.500 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\Hola.txt
+2026-10-15 08:24:15.500 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - 36
+2026-10-15 08:24:15.500 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - C:\Users\usuario1234\Documents\Prueba\tuputamadre.txt
+2026-10-15 08:24:15.500 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - 53
+2026-10-15 08:25:05.566 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - fichero.txt: 0
+2026-10-15 08:25:05.569 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - Prueba2: 0
+2026-10-15 08:25:05.569 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - Hola.txt: 36
+2026-10-15 08:25:05.569 [main] INFO  UNIDAD_1.Boletin_1.Ej8.Gestiona - tuputamadre.txt: 53
