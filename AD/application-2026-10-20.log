@@ -1,0 +1,4 @@
+2026-10-20 16:34:07.846 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Hola cacahuete.txt no existe en C:\Users\leonv\Documents\Menor
+2026-10-20 16:34:07.849 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Tu madre.txt no existe en C:\Users\leonv\Documents\Menor
+2026-10-20 16:34:07.849 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Tu padre.txt no existe en C:\Users\leonv\Documents\Menor
+2026-10-20 16:34:07.851 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Ayuda.txt no existe en C:\Users\leonv\Documents\Mayor

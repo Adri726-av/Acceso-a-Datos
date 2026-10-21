@@ -1,0 +1,11 @@
+2026-10-21 22:19:57.580 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Hola cacahuete.txt no existe en C:\Users\leonv\Documents\Menor
+2026-10-21 22:19:57.583 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Tu madre.txt no existe en C:\Users\leonv\Documents\Menor
+2026-10-21 22:19:57.583 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Tu padre.txt no existe en C:\Users\leonv\Documents\Menor
+2026-10-21 22:19:57.584 [main] ERROR UNIDAD_1.Boletin2_ClaseDiffFolder.models.DiffFolder - El fichero Ayuda.txt no existe en C:\Users\leonv\Documents\Mayor
+2026-10-21 22:46:19.362 [main] INFO  UNIDAD_1.Boletin_1.Ej9.Gestiona - Estos son los archivos que se van a borrar: 
+2026-10-21 22:46:19.363 [main] DEBUG UNIDAD_1.Boletin_1.Ej9.Gestiona - Nombre del fichero: Hola cacahuete.txt
+2026-10-21 22:46:19.365 [main] DEBUG UNIDAD_1.Boletin_1.Ej9.Gestiona - Nombre del fichero: Me quiero dormir.txt
+2026-10-21 22:46:19.366 [main] DEBUG UNIDAD_1.Boletin_1.Ej9.Gestiona - Nombre del fichero: Tu madre.txt
+2026-10-21 22:46:19.366 [main] DEBUG UNIDAD_1.Boletin_1.Ej9.Gestiona - Nombre del fichero: Tu padre.txt
+2026-10-21 22:48:09.996 [main] INFO  UNIDAD_1.Boletin_1.Ej10.Gestiona - Moviendo fichero: Ayuda.txt
+2026-10-21 22:48:09.997 [main] INFO  UNIDAD_1.Boletin_1.Ej10.Gestiona - Moviendo fichero: Me quiero dormir.txt
