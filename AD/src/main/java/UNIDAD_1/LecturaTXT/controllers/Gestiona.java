@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 import UNIDAD_1.LecturaTXT.models.Persona;
 
 public class Gestiona {
-	private static final Logger logger.info = LogManager.getLogger(Gestiona.class);
+	private static final Logger loggerinfo = LogManager.getLogger(Gestiona.class);
 	
 	public static void main(String[] args) {
 		Gestiona g = new Gestiona();

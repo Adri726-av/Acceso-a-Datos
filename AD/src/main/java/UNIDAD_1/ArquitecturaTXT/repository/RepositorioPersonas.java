@@ -51,7 +51,7 @@ public class RepositorioPersonas implements IRepositorioPersonas{
 	}
 
 	@Override
-	public List<UNIDAD_1.LecturaTXT.models.Persona> findAll() {
+	public List<Persona> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

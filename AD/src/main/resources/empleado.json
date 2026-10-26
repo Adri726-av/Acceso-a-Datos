@@ -1,0 +1,13 @@
+{
+	"identificador" : "empleado21",
+	"nombreApellido": "Miguel Ramirez",
+	"edad": 34,
+	"empresa": "Su empresa",
+	"domicilio": {
+	  "calle": "Calle Principal",
+	  "numero": 123,
+	  "ciudad": "Ciudad Ejemplo",
+	  "codigoPostal": "12345"
+	}
+
+}
