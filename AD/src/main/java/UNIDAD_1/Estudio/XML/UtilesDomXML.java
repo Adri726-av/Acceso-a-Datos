@@ -20,7 +20,7 @@ public class UtilesDomXML {
 	public Document getDocumentFromXML(String nombreFichero) {
 		// 1. Crear el analizador DOM
 		Document doc = null;
-        DocumentBuilderFactory factory =   DocumentBuilderFactory.newInstance();
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
         try {
 			builder = factory.newDocumentBuilder();
