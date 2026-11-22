@@ -7,15 +7,13 @@ import org.w3c.dom.Element;
 
 import UNIDAD_1.BoletinXML.Ej1.Models.Pelicula;
 import UNIDAD_1.BoletinXML.Ej1.Repository.XMLDomPeliculas;
+import UNIDAD_1.BoletinXML.Ej1.Service.IPeliculaService;
+import UNIDAD_1.BoletinXML.Ej1.Service.PeliculaService;
 
 public class LecturaDOM {
 	public static void main(String[] args) {
-		XMLDomPeliculas utiles = new XMLDomPeliculas();
-		Document doc = utiles.getDocumentFromXML("peliculas.xml");
-		Element raiz = doc.getDocumentElement();
-		List<Pelicula> peliculas = utiles.leerPeliculasDesdeXML(raiz);
-		for (Pelicula pelicula : peliculas) {
-			System.out.println(pelicula);
-		}
+		IPeliculaService servicio = new PeliculaService("src/main/resources/peliculas.xml");
+		List<Pelicula> peliculas = servicio.findAll();
+		System.out.println(peliculas);
 	}
 }
