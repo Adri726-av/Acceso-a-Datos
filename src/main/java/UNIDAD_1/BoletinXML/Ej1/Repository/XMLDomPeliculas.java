@@ -1,3 +1,5 @@
+
+
 package UNIDAD_1.BoletinXML.Ej1.Repository;
 
 import java.io.File;
@@ -19,6 +21,14 @@ import UNIDAD_1.BoletinXML.Ej1.Models.Pelicula;
 
 public class XMLDomPeliculas {
 	private static final String RUTA_RESOURCES = "src/main/resources/";
+	
+	public List<Pelicula> lecturaXML() {
+		Document doc = getDocumentFromXML("peliculas.xml");
+		Element raiz = doc.getDocumentElement();
+		List<Pelicula> peliculas = leerPeliculasDesdeXML(raiz);
+		return peliculas;
+	}
+	
 	public Document getDocumentFromXML(String nombreFichero) {
 		// 1. Crear el analizador DOM
 		Document doc = null;
@@ -62,7 +72,7 @@ public class XMLDomPeliculas {
 	}
 	
 	public List<Pelicula> leerPeliculasDesdeXML(Element raiz) {
-		 // 1. Obtener todos los elementos <libro>
+		// 1. Obtener todos los elementos <libro>
 	    NodeList listaNodos = raiz.getElementsByTagName("Pelicula");
 	    // 2. Crear la colección de libros
 	    List<Pelicula> peliculas = new ArrayList<>();

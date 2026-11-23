@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.core.lookup.MainMapLookup"/>
+    <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="UNIDAD_1.Boletin2_ClaseDiffFolder.exceptions.GestionFicherosException"/>
+    <fullyQualifiedTypeName name="UNIDAD_1.Boletin2_ClaseDiffFolder.models.ValorComparacion"/>
+    <fullyQualifiedTypeName name="UNIDAD_1.Boletin2_ClaseDiffFolder.models.ResultadoComparacion"/>
+    <fullyQualifiedTypeName name="UNIDAD_1.ArquitecturaTXT.repository.IRepositorioPersonas"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="UNIDAD_1.LecturaTXT.models.Persona"/>
+</qualifiedTypeNameHistroy>

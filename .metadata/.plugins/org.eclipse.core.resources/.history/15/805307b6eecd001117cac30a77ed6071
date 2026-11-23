@@ -1,0 +1,15 @@
+package UNIDAD_1.ArquitecturaTXT.repository;
+
+import java.util.List;
+
+import UNIDAD_1.LecturaTXT.models.Persona;
+
+public class RepositorioPersonas implements IRepositorioPersonas{
+	
+	@Override
+	public List<Persona> findAll() {
+		
+		return null;
+	}
+	
+}

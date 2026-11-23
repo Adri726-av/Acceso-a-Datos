@@ -32,7 +32,7 @@ public class Persona {
 	public void setNotas(List<Double> notas) {
 		if (notas != null) {
             for (Double nota : notas) {
-                if (nota < NOTA_MIN || nota > NOTA_MAX) {
+                if (nota < notaMin || nota > notaMax) {
                     throw new IllegalArgumentException("Nota no válida: " + nota);
                 }
             }
