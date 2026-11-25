@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleados>
+	<empleado id="1">
+		<nombreApellidos>Adrián López</nombreApellidos>
+		<edad>25</edad>
+		<empresa>Google</empresa>
+		<puesto departamento="Informática" id="1">
+			<nombrePuesto>Programador</nombrePuesto>
+			<salario>2200.0</salario>
+		</puesto>
+	</empleado>
+	<empleado id="2">
+		<nombreApellidos>María García</nombreApellidos>
+		<edad>30</edad>
+		<empresa>Microsoft</empresa>
+		<puesto departamento="Diseño" id="2">
+			<nombrePuesto>Diseñador</nombrePuesto>
+			<salario>1900.0</salario>
+		</puesto>
+	</empleado>
+	<empleado id="3">
+		<nombreApellidos>Carlos Fernández</nombreApellidos>
+		<edad>28</edad>
+		<empresa>Amazon</empresa>
+		<puesto departamento="Informática" id="3">
+			<nombrePuesto>Analista</nombrePuesto>
+			<salario>2500.0</salario>
+		</puesto>
+	</empleado>
+	<empleado id="4">
+		<nombreApellidos>Laura Sánchez</nombreApellidos>
+		<edad>35</edad>
+		<empresa>Apple</empresa>
+		<puesto departamento="Administración" id="4">
+			<nombrePuesto>Contable</nombrePuesto>
+			<salario>1800.0</salario>
+		</puesto>
+	</empleado>
+	<empleado id="5">
+		<nombreApellidos>Pablo Martínez</nombreApellidos>
+		<edad>42</edad>
+		<empresa>IBM</empresa>
+		<puesto departamento="Dirección" id="5">
+			<nombrePuesto>Director</nombrePuesto>
+			<salario>3500.0</salario>
+		</puesto>
+	</empleado>
+</empleados>

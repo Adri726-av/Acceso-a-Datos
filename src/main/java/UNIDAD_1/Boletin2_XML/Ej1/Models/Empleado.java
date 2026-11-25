@@ -1,7 +1,7 @@
 package UNIDAD_1.Boletin2_XML.Ej1.Models;
 
 public class Empleado {
-	private int id;
+	private String id;
 	private String nombreAp;
 	private int edad;
 	private String empresa;
@@ -12,7 +12,7 @@ public class Empleado {
 		this.empresa = empresa;
 		this.puesto = puesto;
 	}
-	public Empleado(int id, String nombreAp, int edad, String empresa, Puesto puesto) {
+	public Empleado(String id, String nombreAp, int edad, String empresa, Puesto puesto) {
 		super();
 		this.id = id;
 		this.nombreAp = nombreAp;
@@ -20,10 +20,10 @@ public class Empleado {
 		this.empresa = empresa;
 		this.puesto = puesto;
 	}
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getNombreAp() {
