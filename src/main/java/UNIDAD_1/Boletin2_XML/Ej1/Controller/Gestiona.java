@@ -6,6 +6,8 @@ import java.util.List;
 import UNIDAD_1.Boletin2_XML.Ej1.Models.Empleado;
 import UNIDAD_1.Boletin2_XML.Ej1.Models.Puesto;
 import UNIDAD_1.Boletin2_XML.Ej1.Repository.UtilesXMLDom;
+import UNIDAD_1.Boletin2_XML.Ej1.Service.EmpleadoService;
+import UNIDAD_1.Boletin2_XML.Ej1.Service.IEmpleadoService;
 
 public class Gestiona {
 	public static void main(String[] args) {
@@ -24,11 +26,11 @@ public class Gestiona {
 	    empleados.add(new Empleado("4", "Laura Sánchez", 35, "Apple", p4));
 	    empleados.add(new Empleado("5", "Pablo Martínez", 42, "IBM", p5));
 	    
-	    UtilesXMLDom utiles = new UtilesXMLDom();
-//	    utiles.escribeEmpleadosEnXML("empleados.xml", empleados);
-	    List<Empleado> lista = utiles.lecturaXML();
+	    IEmpleadoService servicio = new EmpleadoService("empleados_100.xml");
+	    List<Empleado> lista = servicio.findAll();
 	    for (Empleado empleado : lista) {
 			System.out.println(empleado);
 		}
+	    servicio.save("empleadosBien.xml", lista);
 	}
 }

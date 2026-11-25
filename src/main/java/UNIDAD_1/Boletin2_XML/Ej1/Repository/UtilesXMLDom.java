@@ -24,19 +24,26 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Text;
 import org.xml.sax.SAXException;
 
+import UNIDAD_1.Boletin2_XML.Ej1.Exceptions.EmpleadoException;
 import UNIDAD_1.Boletin2_XML.Ej1.Models.Empleado;
 import UNIDAD_1.Boletin2_XML.Ej1.Models.Puesto;
 
 public class UtilesXMLDom {
 	private static final String RUTA_RESOURCES = "src/main/resources/";
 	private static final Logger logger = LogManager.getLogger(UtilesXMLDom.class);
-	
+	private File archivo;
+
+	public UtilesXMLDom(String ruta) {
+		super();
+		this.archivo = new File(RUTA_RESOURCES, ruta);
+	}
+
 	/*
 	 * TODO ESTO ES PARA 
 	 * LEER UN FICHERO XML
 	 * */
 	
-	public Document getDocumentFromXML(String nombreFichero) {
+	private Document getDocumentFromXML() throws EmpleadoException{
 		// 1. Crear el analizador DOM
 		Document doc = null;
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -44,75 +51,98 @@ public class UtilesXMLDom {
         try {
 			builder = factory.newDocumentBuilder();
 			try {
-				doc = builder.parse(new File(RUTA_RESOURCES + nombreFichero));
+				doc = builder.parse(archivo);
 			} catch (SAXException e) {
-				e.printStackTrace();
+				throw new EmpleadoException("Se ha lanzado SAXException");
 			} catch (IOException e) {
-				e.printStackTrace();
+				throw new EmpleadoException("Se ha lanzado IOException");
 			}
 		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
+			throw new EmpleadoException("Se ha lanzado ParserConfigurationException");
 		}
         return doc;
 	}
 	
-	public Puesto fromElement2Puesto(Element raiz) {
+	private Puesto fromElement2Puesto(Element raiz) throws EmpleadoException {
 		// Atributos
 		String id = raiz.getAttribute("id"); // Opcional
 		String departamento = raiz.getAttribute("departamento"); // Opcional
 		// Elementos
 		Element nombreElemento = (Element) raiz.getElementsByTagName("nombrePuesto").item(0);
+		if (nombreElemento == null) {
+			throw new EmpleadoException("NombrePuesto nulo");
+		}
 		String nombre = nombreElemento.getTextContent();
 		Element salarioElemento = (Element) raiz.getElementsByTagName("salario").item(0);
+		if (salarioElemento == null) {
+			throw new EmpleadoException("Salario nulo");
+		}
 		Double salario = Double.parseDouble(salarioElemento.getTextContent());
 		Puesto puesto;
-		if (id == null && departamento == null) {
-			puesto = new Puesto(nombre, salario);
+		puesto = new Puesto(nombre, salario);
+		if (id != null) {
+			puesto.setId(id);
 		}
-		else {
-			puesto = new Puesto(id, nombre, departamento, salario);
+		if (departamento != null) {
+			puesto.setDepartamento(departamento);
 		}
 		return puesto;
 	}
 	
-	public Empleado fromElement2Empleado(Element raiz) {
+	private Empleado fromElement2Empleado(Element raiz) throws EmpleadoException {
+		Empleado empleado = null;
 		// Atributos
 		String id = raiz.getAttribute("id"); // Opcional
 		// Elementos
 		Element nombreApElemento = (Element) raiz.getElementsByTagName("nombreApellidos").item(0);
-		String nombre = nombreApElemento.getTextContent();
-		Element edadElemento = (Element) raiz.getElementsByTagName("edad").item(0); // Opcional
-		Integer edad = null;
-		Element empresaElemento = (Element) raiz.getElementsByTagName("empresa").item(0);
-		String empresa = empresaElemento.getTextContent();
-		Element puesto = (Element) raiz.getElementsByTagName("puesto").item(0);
-		Puesto p = fromElement2Puesto(puesto);
-		Empleado empleado;
-		if (edadElemento != null) {
-			edad = Integer.parseInt(edadElemento.getTextContent());
-		}
-		if (edadElemento == null && id == null) {
+		try {
+			if (nombreApElemento == null) {
+				throw new EmpleadoException("Nombre nulo");
+			}
+			String nombre = nombreApElemento.getTextContent();
+			Element edadElemento = (Element) raiz.getElementsByTagName("edad").item(0); // Opcional
+			Integer edad = null;
+			Element empresaElemento = (Element) raiz.getElementsByTagName("empresa").item(0);
+			if (empresaElemento == null) {
+				throw new EmpleadoException("Empresa nulo");
+			}
+			String empresa = empresaElemento.getTextContent();
+			Element puesto = (Element) raiz.getElementsByTagName("puesto").item(0);
+			if (puesto == null) {
+				throw new EmpleadoException("Puesto es nulo");
+			}
+			Puesto p = fromElement2Puesto(puesto);
+			if (edadElemento != null) {
+				edad = Integer.parseInt(edadElemento.getTextContent());
+			}
 			empleado = new Empleado(nombre, empresa, p);
-		}
-		else {
-			empleado = new Empleado(id, nombre, edad, empresa, p);
+			if (id != null) {
+				empleado.setId(id);
+			}
+			if (edad != null) {
+				empleado.setEdad(edad);
+			}
+		} catch (EmpleadoException e) {
+			logger.error(e.getMessage());
 		}
 		return empleado;
 	}
 	
-	public List<Empleado> leerEmpleadosDesdeXML(Element raiz) {
+	private List<Empleado> leerEmpleadosDesdeXML(Element raiz) throws EmpleadoException {
 		NodeList listaNodos = raiz.getElementsByTagName("empleado");
 		List<Empleado> empleados = new ArrayList<Empleado>();
 		for (int i = 0; i < listaNodos.getLength(); i++) {
 			Element elementoEmpleado = (Element) listaNodos.item(i);
 			Empleado empleado = fromElement2Empleado(elementoEmpleado);
-			empleados.add(empleado);
+			if (empleado != null) {
+				empleados.add(empleado);
+			}
 		}
 		return empleados;
 	}
 	
-	public List<Empleado> lecturaXML() {
-		Document doc = getDocumentFromXML("empleados.xml");
+	public List<Empleado> lecturaXML() throws EmpleadoException {
+		Document doc = getDocumentFromXML();
 		Element raiz = doc.getDocumentElement();
 		List<Empleado> empleados = leerEmpleadosDesdeXML(raiz);
 		return empleados;
@@ -145,11 +175,14 @@ public class UtilesXMLDom {
 	
 	private void agregaEmpleadoADocumento(Document documento, Element padre, Empleado e) {
 		// Atributos
-		padre.setAttribute("id", e.getId());
+		if (e.getId() != null) {
+			padre.setAttribute("id", e.getId());
+		}
 		// Elementos
 		Element nombreAp = this.creaElemento("nombreApellidos", e.getNombreAp(), padre, documento);
-		String edadE = String.valueOf(e.getEdad());
-		Element edad = this.creaElemento("edad", edadE, padre, documento);
+		if (Integer.toString(e.getEdad()) != null) {
+			Element edad = this.creaElemento("edad", String.valueOf(e.getEdad()), padre, documento);
+		}
 		Element empresa = this.creaElemento("empresa", e.getEmpresa(), padre, documento);
 		Puesto p = e.getPuesto();
 		Element puesto = this.creaElemento("puesto", null, padre, documento);
@@ -173,20 +206,20 @@ public class UtilesXMLDom {
 		transformer.transform(source, resultado);
 	}
 	
-	public void escribeEmpleadoEnXML(String nombreFichero, Empleado e) {
+	public void escribeEmpleadoEnXML(String nombreFichero, Empleado e) throws EmpleadoException{
 		try {
 			Document documento = this.construyoObjetoDocumento("empleado");
 			Element raiz = documento.getDocumentElement();
 			agregaEmpleadoADocumento(documento, raiz, e);
 			escribeDocumentoEnFichero(documento, nombreFichero);
 		} catch (ParserConfigurationException e1) {
-			logger.error(e1.getMessage());
+			throw new EmpleadoException("Error al escribir xml");
 		} catch (TransformerException e1) {
-			logger.error(e1.getMessage());
+			throw new EmpleadoException("Error muy serio");
 		}
 	}
 	
-	public void escribeEmpleadosEnXML(String nombreFichero, List<Empleado> empleados) {
+	public void escribeEmpleadosEnXML(String nombreFichero, List<Empleado> empleados) throws EmpleadoException{
 		try {
 			Document documento = this.construyoObjetoDocumento("empleados");
 			for (Empleado e: empleados) {
@@ -195,9 +228,9 @@ public class UtilesXMLDom {
 			}
 			escribeDocumentoEnFichero(documento, nombreFichero);
 		} catch (ParserConfigurationException e) {
-			logger.error(e.getMessage());
+			throw new EmpleadoException("Error serio");
 		} catch (TransformerException e1) {
-			logger.error(e1.getMessage());
+			throw new EmpleadoException("Error muy serio");
 		}
 	}
 }
