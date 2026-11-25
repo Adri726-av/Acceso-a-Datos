@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -128,9 +131,9 @@ public class UtilesXMLDom {
 		return empleado;
 	}
 	
-	private List<Empleado> leerEmpleadosDesdeXML(Element raiz) throws EmpleadoException {
+	private Set<Empleado> leerEmpleadosDesdeXML(Element raiz) throws EmpleadoException {
 		NodeList listaNodos = raiz.getElementsByTagName("empleado");
-		List<Empleado> empleados = new ArrayList<Empleado>();
+		Set<Empleado> empleados = new HashSet<Empleado>();
 		for (int i = 0; i < listaNodos.getLength(); i++) {
 			Element elementoEmpleado = (Element) listaNodos.item(i);
 			Empleado empleado = fromElement2Empleado(elementoEmpleado);
@@ -141,10 +144,10 @@ public class UtilesXMLDom {
 		return empleados;
 	}
 	
-	public List<Empleado> lecturaXML() throws EmpleadoException {
+	public Set<Empleado> lecturaXML() throws EmpleadoException {
 		Document doc = getDocumentFromXML();
 		Element raiz = doc.getDocumentElement();
-		List<Empleado> empleados = leerEmpleadosDesdeXML(raiz);
+		Set<Empleado> empleados = leerEmpleadosDesdeXML(raiz);
 		return empleados;
 	}
 	
@@ -219,7 +222,7 @@ public class UtilesXMLDom {
 		}
 	}
 	
-	public void escribeEmpleadosEnXML(String nombreFichero, List<Empleado> empleados) throws EmpleadoException{
+	public void escribeEmpleadosEnXML(String nombreFichero, Set<Empleado> empleados) throws EmpleadoException{
 		try {
 			Document documento = this.construyoObjetoDocumento("empleados");
 			for (Empleado e: empleados) {

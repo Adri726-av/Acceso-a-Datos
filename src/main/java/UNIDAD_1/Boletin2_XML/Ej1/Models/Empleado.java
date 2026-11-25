@@ -55,5 +55,4 @@ public class Empleado {
 		return "Empleado [id=" + id + ", nombreAp=" + nombreAp + ", edad=" + edad + ", empresa=" + empresa + ", puesto="
 				+ puesto + "]";
 	}
-	
 }
