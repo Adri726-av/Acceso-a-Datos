@@ -30,9 +30,9 @@ public class Gestiona {
 	    
 	    IEmpleadoService servicio = new EmpleadoService("empleados_100.xml");
 	    Set<Empleado> lista = servicio.findAll();
-//	    for (Empleado empleado : lista) {
-//			System.out.println(empleado);
-//		}
+	    for (Empleado empleado : lista) {
+			System.out.println(empleado);
+		}
 	    Set<Empleado> listaOrdenada = servicio.ordenarPorSalario(lista);
 	    System.out.println(listaOrdenada);
 	    servicio.save("empleadosBien.xml", listaOrdenada);
